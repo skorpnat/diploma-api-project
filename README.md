@@ -1,4 +1,5 @@
 <h1 >Проект автоматизации тестирования API <a href="https://jsonplaceholder.typicode.com/">JSONPlaceholder</a></h1>
+
 ## Содержание
 
 * <a href="#annotation">Описание</a>
@@ -73,10 +74,6 @@ gradle clean test
 
 <a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="media/screenshots/sborka.jpg" alt="Jenkins"/></a>
 </p>
-
-
-<a id="jenkins"></a>
-## Запуск тестов в <a target="_blank" href="https://jenkins.autotests.cloud/job/017-Jenny_Ndbn-java-24-webinar-final-project/"> Jenkins </a>
 
 <a id="allure"></a>
 ## </a> [Allure Report](https://jenkins.autotests.cloud/job/18-johnnyhlammaster-regresInFinal/8/allure/) отчеты
