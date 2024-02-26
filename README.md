@@ -7,7 +7,8 @@
 * <a href="#cases">Автоматизированные проверки API</a>
 * <a href="#console">Запуск тестов из терминала</a>
 * <a href="#jenkins">Запуск тестов в Jenkins</a>
-* <a href="#allure">Отчеты в Allure</a>
+* <a href="#devops">Отчеты в Allure DevOps</a>
+* <a href="#jira">Интеграция Jira</a>
 
 <a id="annotation"></a>
 ## Описание
@@ -62,35 +63,30 @@
 gradle clean test  
 ```
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/18-johnnyhlammaster-regresInFinal/)
+## Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/C23-NataliaKlmn-diploma-api-project/)
 
 <p align="center">
 
 > Для запуска необходимо нажать "Собрать сейчас".
 
-<a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="media/screenshots/jenkins.jpg" alt="Jenkins"/></a>
-
 > При клике на сборку после завершения можно увидеть артефакты запуска и полезные ссылки для более детального изучения прогона.
 
-<a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="media/screenshots/sborka.jpg" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="images/screenshots/allure_report_5.jpg" alt="Jenkins"/></a>
 </p>
 
-<a id="allure"></a>
-## </a> [Allure Report](https://jenkins.autotests.cloud/job/18-johnnyhlammaster-regresInFinal/8/allure/) отчеты
-
-### Основное окно
+<a id="devops"></a>
+## </a> [Allure DevOps Report](https://jenkins.autotests.cloud/job/C23-NataliaKlmn-diploma-api-project/2/allure/) отчеты
 
 <p align="center">
-<img title="Allure Dashboard" src="media/screenshots/dashboard.jpg">
+<img title="Allure Dashboard" src="images/screenshots/dev_ops_api_5.jpg">
 </p>
 
-### Отчеты по тестам
+<a id="jira"></a>
+## Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1127)
 
 <p align="center">
 
-> В отчете по тестам присутствует развернутая информация по запросам и ответам.
-
-<img title="Allure Tests" src="media/screenshots/testcase.jpg">
+<p align="center">
+<img title="Jira Dashboard" src="images/screenshots/jira_api_5.jpg">
 </p>
-
 
