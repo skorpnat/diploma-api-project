@@ -1,6 +1,7 @@
 package tests;
 
 
+import io.qameta.allure.Feature;
 import models.CreatePublicationResponseModel;
 import models.PublicationResponseModel;
 import models.PublicationSingleModel;
@@ -17,6 +18,7 @@ import static specs.PublicationSpecs.*;
 public class PublicationApiTests {
 
     @Test
+    @Feature("Получение данных по публикации")
     @DisplayName("Получение данных одной публикации")
     public void testGetSinglePost() {
         PublicationResponseModel response = step("GET запрос из раздела data про пользователя", () ->
@@ -27,7 +29,7 @@ public class PublicationApiTests {
                         .spec(successfulResponse)
                         .extract().as(PublicationResponseModel.class));
 
-        step("Проверка полученных значений пользователя", () -> {
+        step("Проверка полученных значений публикации", () -> {
             assertThat(response.getId()).isEqualTo(1);
             assertThat(response.getUserId()).isEqualTo(1);
             assertThat(response.getTitle()).isEqualTo("sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
@@ -37,6 +39,7 @@ public class PublicationApiTests {
     }
 
     @Test
+    @Feature("Получение данных по публикации")
     @DisplayName("Запрос данных на не существующую публикацию")
     public void testGetNotExistingPost() {
         step("GET запрос данных не существующую публикацию", () -> {
@@ -49,7 +52,8 @@ public class PublicationApiTests {
     }
 
     @Test
-    @DisplayName("Удаление пользователя")
+    @Feature("Удаление публикации")
+    @DisplayName("Удаление публикации")
     public void testDeletePost() {
         step("DELETE запрос на удаление публикации и проверка кода ответа", () -> {
             given(postRequestSpec)
@@ -60,7 +64,8 @@ public class PublicationApiTests {
     }
 
     @Test
-    @DisplayName("Создание нового пользователя")
+    @Feature("Новая публикация")
+    @DisplayName("Создание новой публикации")
     public void testPostNewUser() {
 
         PublicationSingleModel singlePostBody = new PublicationSingleModel();
@@ -68,7 +73,7 @@ public class PublicationApiTests {
         singlePostBody.setBody("quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nquia et suscipit");
         singlePostBody.setTitle("quia et suscipit");
 
-        CreatePublicationResponseModel response = step("POST запрос для создания нового пользователя", () ->
+        CreatePublicationResponseModel response = step("POST запрос для создания новой публикации", () ->
                 given(postRequestSpec)
                         .body(singlePostBody)
                         .when()
@@ -77,7 +82,7 @@ public class PublicationApiTests {
                         .spec(successfulCreateResponse)
                         .extract().as(CreatePublicationResponseModel.class));
 
-        step("Проверка параметров созданного успешно пользователя", () -> {
+        step("Проверка параметров созданной успешно публикации", () -> {
             assertThat(response.getId()).isNotNull();
             assertThat(response.getUserId()).isEqualTo(1);
             assertThat(response.getBody()).isEqualTo("quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nquia et suscipit");
@@ -86,6 +91,7 @@ public class PublicationApiTests {
     }
 
  @Test
+ @Feature("Получение данных по публикации")
  @DisplayName("Проверка наличия публикации в списке")
  public void testGetListPost() {
 
